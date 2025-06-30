@@ -1,0 +1,39 @@
+{
+    "budgie": [{
+        "title":"Budgie Audio Segmentation",
+        "text": "For my masters thesis project, I developed an automatic audio segmentation pipeline for budgerigar audio recordings. Traditional DL-based audio segmentation uses a model to classify each chunk of audio consecutively. However, our recordings are often upwards of 24 hours in length, providing a significant challenge in terms of computational resources. To circumnavigate this, I divided the task into: 1. Audio event detection, and then 2. Conversion of audio events into an image, and 3. Classification (of audio images). The classification portion of this was created using the EfficientNet B0 architecture in Pytorch. This choice was made because of EfficientNets significantly higher accuracy with less training data, and smaller computation requirements. My final results were ~98% classification accuracy for audio events. The hyperlink provided in this section links to the first of the three steps. For more information or questions, please contact me.",
+        "alttext": "budgie audio processing",
+        "link":"https://github.com/civond/budgie_audio_segmentation"
+        }],
+    "ecg_denoising": [{
+        "title":"Wavelet-based ECG Denoising",
+        "text": "In this project, I applied the discrete wavelet transform to decompose an ECG waveform into its corresponding approximation and detail coefficients. The approximation coefficient and the first detail coefficient appear to provide a good estimation of the original waveform. Thus, I chose to apply thresholding and the inverse DWT to these two coefficients alone. The end result is a cleaner signal than just bandpassing alone. Then a scalogram was generated using this waveform, which can be used as an input to CNN architectures to screen for cardiac arrhythmias.",
+        "alttext": "ECG denoising",
+        "link":"https://github.com/civond/ecg_scalogram"
+        }],
+
+    "plant": [{
+        "title":"Plant Monitoring",
+        "text": "This is an ESP32-based plant monitoring project created using PlatformIO and the Arduino framework. It has the functionality of collecting sensor data for soil temperature, soil humidity ambient light which are stored on a micro SD card. Current data is also displayed on the SSD 1306 screen. The plant data can be pushed in real time to the internet using the ESP32s built-in wifi capability to create visualizations on the environment over time.",
+        "alttext": "Plant monitoring",
+        "link":"https://github.com/civond/esp_plant_monitoring"
+        }],
+    "xray": [{
+        "title":"Chest X-RAY Classification",
+        "text": "In this project, I applied deep learning to classify chest xrays for Covid-19. The quality and contrast of each xray image can vary. Thus, I applied the CLAHE algorithm to each image to enhance fine detail visibility. Then, I used a bandstop filter of 30-50 hertz to reduce the noise induced in the previous step. Preprocessed images were then passed through a neural neural network (EfficientNet) and then classified with an accuracy of ~97%.",
+        "alttext": "xray classification",
+        "link":"https://github.com/civond/hybrid-chest-xray"
+        }],
+    "ecg_monitoring": [{
+        "title":"ECG Monitoring",
+        "text": "I used the AD-8232 ECG sensor with the ESP32 microcontroller to perform low-cost cardiac rhythm monitoring. To denoise the raw sensor data in real time, I used a bandpass filter [wc 3.18 Hz-22.4 Hz].",
+        "alttext": "ecg_monitoring",
+        "link":"https://github.com/civond/ecgacquisition"
+        }],
+    "fmon": [{
+        "title":"Mouse Position Tracking",
+        "text": "During my time in the Smear Lab, I used deep learning tools to label and train models to track a mouse's trajectory during experiments.",
+        "alttext": "budgie audio processing",
+        "link":"https://github.com/civond/FMOS-DeepLabCut-Pipeline"
+        }]
+}

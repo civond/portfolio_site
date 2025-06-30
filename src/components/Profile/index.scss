@@ -1,0 +1,76 @@
+
+
+#profile_container {
+    @background:#363636;
+    width:350px;
+    height:520px;
+    padding:10px;
+    border-radius:10%;
+    position:absolute;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width:350px;
+        height:350px;
+        border-radius:50%;
+    }
+
+    .name {
+        position:absolute;
+        text-align: center;
+        font-family: Arial;
+        font-size: 30px;
+        color:rgb(234, 234, 234);
+        width:350px;
+        top:320px;
+    }
+
+    .title{
+        position:absolute;
+        text-align: center;
+        font-family: Arial;
+        font-size: 20px;
+        color:rgb(193, 193, 193);
+        width:350px;
+        top:420px;
+    }
+
+    .icon_container {
+        height:80px;
+        width:180px;
+        position:absolute;
+        left:85px;
+        top:445px;
+        margin:0;
+        @background-color: green;
+        
+        ul {
+            display: flex; 
+            list-style: none;
+            padding: 0;          /* REMOVE default padding */
+            @margin: 0; 
+        }
+        
+        li {
+            display: flex; 
+        }
+
+        .button_wrapper {
+            width: 60px;
+            height: 60px;
+            font-size: 60px;
+            color:rgb(78, 106, 120);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            opacity: 40%;
+          }
+          .button_wrapper:hover {
+            opacity: 100%;
+          }
+    }
+
+}
+
+
